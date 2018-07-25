@@ -8,6 +8,11 @@ class App extends Component {
     super(props)
     this.state = {menuShow: false}
     this.menuClick = this.menuClick.bind(this)
+    window.gm_authFailure = this.gm_authFailure
+  }
+
+  gm_authFailure(){
+    window.alert("Abort! Abort! Google Maps has encountered an error!")
   }
 
   // Changes the menuShow state
